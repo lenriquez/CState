@@ -1,17 +1,18 @@
 Rails.application.routes.draw do
-  mount_devise_token_auth_for 'User', at: 'auth'
-  get '/' => 'al_ord#index'
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  #get '/' => 'a#index'
+
   scope '/api' do
     scope '/v1' do
-      scope '/authentication' do
-	      post '/sign_in' => 'authentication#sign_in'
-	      post '/sing_up' => 'authentication#sing_up'
+      scope '/auth' do
+        post "/register" => 'auth#register'
       end
-      scope '/diagram' do
-      	get '/' => 'diagram#index'
-      end
+    end
+  end
+
+  scope :api do
+    scope :v1 do
+      mount_devise_token_auth_for "User", at: 'auth'
     end
   end
 end

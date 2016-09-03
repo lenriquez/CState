@@ -1,6 +1,10 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Set times
+  config.time_zone = 'UTC'
+  config.active_record.default_timezone = :utc
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -25,6 +29,11 @@ Rails.application.configure do
 
     config.cache_store = :null_store
   end
+
+  # This options should be enable if we want to use the mail for now this has been remove
+  #config.action_mailer.default_url_options = { :host => 'your-dev-host.dev' }
+  #config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
