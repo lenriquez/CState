@@ -1,0 +1,20 @@
+
+.index {
+  background-image: url("background.jpg");
+  height: 500px;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.searchbox {
+    position: absolute;
+    z-index: 9999;
+    top: 100px;
+    height: 40px;
+    width: 400px;
+    background: whitesmoke;
+    border: none;
+    left: 20px;
+    padding-right: 20px;
+}
+
