@@ -13,5 +13,15 @@
 !/log/.keep
 !/tmp/.keep
 
+## Environment normalization:
+/.bundle
+/vendor/bundle
+
+# if using bower-rails ignore default bower_components path bower.json files
+/vendor/assets/bower_components
+*.bowerrc
+bower.json
+
+
 # Ignore Byebug command history file.
 .byebug_history
