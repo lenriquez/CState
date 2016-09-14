@@ -15,6 +15,10 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require login-modal
+//= require jquery-deparam
+//= require jquery-cookie
+//= require pubsub-js
+//= require j-toker
 //= require_tree .
 
 
